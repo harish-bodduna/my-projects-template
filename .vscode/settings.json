@@ -1,0 +1,4 @@
+{
+  "dev.containers.initializeWorkspace": "never",
+  "dev.containers.defaultTemplates": []
+}
