@@ -6,13 +6,16 @@
   },
   "runArgs": [
     "--gpus=all",
-    "--shm-size=2g",
+    "--shm-size=8gb",
+    "--memory=16g",
+    "--memory-swap=32g",
     "--ulimit=memlock=-1",
     "--ulimit=stack=67108864"
   ],
   "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
   "remoteUser": "vscode",
-  "overrideCommand": false,
+  "overrideCommand": true,
   "updateRemoteUserUID": false,
   "customizations": {
     "vscode": {
