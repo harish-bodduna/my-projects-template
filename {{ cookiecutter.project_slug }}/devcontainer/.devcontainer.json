@@ -2,7 +2,7 @@
   "name": "ML Project Template Dev",
   "build": {
     "dockerfile": "Dockerfile",
-    "context": "."
+    "context": ".."
   },
   "runArgs": [
     "--gpus=all",
@@ -10,11 +10,10 @@
     "--ulimit=memlock=-1",
     "--ulimit=stack=67108864"
   ],
-  "mounts": [
-    "source=${localWorkspaceFolder},target=/workspace,type=bind"
-  ],
   "workspaceFolder": "/workspace",
   "remoteUser": "vscode",
+  "overrideCommand": false,
+  "updateRemoteUserUID": false,
   "customizations": {
     "vscode": {
       "settings": {
@@ -32,7 +31,7 @@
       ]
     }
   },
-  "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
+  "postCreateCommand": "pip install --no-cache-dir -r /workspace/requirements.txt",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {}
   }
