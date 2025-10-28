@@ -2,5 +2,5 @@
   "project_name": "my-project",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
   "kaggle_dataset": "dataset-name",
-  "author": "harish"
+  "author": "harish-bodduna"
 }
